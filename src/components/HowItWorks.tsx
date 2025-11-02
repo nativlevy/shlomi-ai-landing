@@ -25,30 +25,30 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section className="py-20 px-4 bg-white">
+    <section className="py-24 md:py-32 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight font-display">
             How Shlomi AI Works
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-body">
             Get started in minutes and see immediate improvements in your
             clinical confidence and preparation.
           </p>
         </div>
 
         {/* Steps */}
-        <div className="space-y-12">
+        <div className="space-y-16 md:space-y-20">
           {steps.map((step, index) => (
             <div
               key={index}
-              className="flex flex-col md:flex-row gap-8 items-start group"
+              className="flex flex-col md:flex-row gap-10 items-start group"
             >
               {/* Step Number */}
               <div className="flex-shrink-0">
-                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center">
-                  <span className="text-3xl font-bold text-white">
+                <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center shadow-soft-lg group-hover:scale-110 group-hover:shadow-soft-xl transition-all duration-300">
+                  <span className="text-4xl font-bold text-white font-display">
                     {step.number}
                   </span>
                 </div>
@@ -56,10 +56,10 @@ export function HowItWorks() {
 
               {/* Content */}
               <div className="flex-1">
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors">
+                <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 group-hover:text-primary-600 transition-colors font-display">
                   {step.title}
                 </h3>
-                <p className="text-lg text-gray-600 leading-relaxed">
+                <p className="text-lg md:text-xl text-gray-600 leading-relaxed font-body">
                   {step.description}
                 </p>
               </div>
@@ -67,7 +67,7 @@ export function HowItWorks() {
               {/* Arrow (except for last item) */}
               {index < steps.length - 1 && (
                 <div className="hidden lg:flex items-center justify-center">
-                  <ArrowRight className="h-8 w-8 text-gray-300" />
+                  <ArrowRight className="h-8 w-8 text-primary-300 group-hover:text-primary-500 transition-colors" />
                 </div>
               )}
             </div>

@@ -24,47 +24,47 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
+    <section className="py-24 md:py-32 px-4 bg-gradient-to-b from-gray-50/50 via-white to-gray-50/30">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight font-display">
             Trusted by Future Leaders in Psychology
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-body">
             See what young psychologists are saying about their experience with Shlomi AI.
           </p>
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
           {testimonials.map((testimonial, index) => (
             <Card
               key={index}
-              className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="border border-gray-100 bg-white hover:border-primary-200 shadow-soft hover:shadow-soft-lg transition-all duration-500 hover:-translate-y-2 rounded-2xl"
             >
-              <CardContent className="pt-6">
+              <CardContent className="pt-8">
                 {/* Rating Stars */}
-                <div className="flex gap-1 mb-4">
+                <div className="flex gap-1 mb-6">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star
                       key={i}
-                      className="h-5 w-5 fill-yellow-400 text-yellow-400"
+                      className="h-5 w-5 fill-amber-400 text-amber-400"
                     />
                   ))}
                 </div>
 
                 {/* Testimonial Content */}
-                <p className="text-gray-700 mb-6 leading-relaxed">
+                <p className="text-gray-700 mb-8 leading-relaxed text-base font-body">
                   "{testimonial.content}"
                 </p>
 
                 {/* Author */}
-                <div className="border-t pt-4">
-                  <p className="font-semibold text-gray-900">
+                <div className="border-t border-gray-100 pt-5">
+                  <p className="font-semibold text-gray-900 font-display">
                     {testimonial.name}
                   </p>
-                  <p className="text-sm text-gray-500">{testimonial.role}</p>
+                  <p className="text-sm text-gray-500 mt-1 font-body">{testimonial.role}</p>
                 </div>
               </CardContent>
             </Card>
@@ -72,24 +72,24 @@ export function Testimonials() {
         </div>
 
         {/* Stats */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div>
-            <p className="text-4xl md:text-5xl font-bold text-primary-600 mb-2">
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+          <div className="group">
+            <p className="text-5xl md:text-6xl font-bold text-primary-600 mb-3 font-display group-hover:scale-110 transition-transform duration-300">
               500+
             </p>
-            <p className="text-gray-600">Active Users</p>
+            <p className="text-gray-600 text-lg font-body">Active Users</p>
           </div>
-          <div>
-            <p className="text-4xl md:text-5xl font-bold text-primary-600 mb-2">
+          <div className="group">
+            <p className="text-5xl md:text-6xl font-bold text-primary-600 mb-3 font-display group-hover:scale-110 transition-transform duration-300">
               10,000+
             </p>
-            <p className="text-gray-600">Practice Sessions Completed</p>
+            <p className="text-gray-600 text-lg font-body">Practice Sessions Completed</p>
           </div>
-          <div>
-            <p className="text-4xl md:text-5xl font-bold text-primary-600 mb-2">
+          <div className="group">
+            <p className="text-5xl md:text-6xl font-bold text-primary-600 mb-3 font-display group-hover:scale-110 transition-transform duration-300">
               4.9/5
             </p>
-            <p className="text-gray-600">Average Rating</p>
+            <p className="text-gray-600 text-lg font-body">Average Rating</p>
           </div>
         </div>
       </div>

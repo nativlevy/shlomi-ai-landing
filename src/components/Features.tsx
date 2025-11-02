@@ -36,36 +36,38 @@ const features = [
 
 export function Features() {
   return (
-    <section className="py-20 px-4 bg-gray-50">
+    <section className="py-24 md:py-32 px-4 bg-gradient-to-b from-white via-gray-50/50 to-white">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight font-display">
             Everything You Need to Excel
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-body">
             Comprehensive tools designed specifically for early-career psychologists
             to build confidence and competence.
           </p>
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
           {features.map((feature, index) => {
             const Icon = feature.icon
             return (
               <Card
                 key={index}
-                className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="group border border-gray-100 bg-white hover:border-primary-200 shadow-soft hover:shadow-soft-lg transition-all duration-500 hover:-translate-y-1 rounded-2xl overflow-hidden"
               >
-                <CardHeader>
-                  <div className="mb-4 inline-flex p-3 bg-gradient-to-br from-primary-500 to-accent-500 rounded-lg">
-                    <Icon className="h-6 w-6 text-white" />
+                <CardHeader className="pb-4">
+                  <div className="mb-5 inline-flex p-4 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl shadow-soft group-hover:scale-110 transition-transform duration-300">
+                    <Icon className="h-7 w-7 text-white" />
                   </div>
-                  <CardTitle className="text-2xl">{feature.title}</CardTitle>
+                  <CardTitle className="text-2xl font-display font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
+                    {feature.title}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base text-gray-600">
+                  <CardDescription className="text-base text-gray-600 leading-relaxed font-body">
                     {feature.description}
                   </CardDescription>
                 </CardContent>
