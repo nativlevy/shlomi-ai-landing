@@ -1,9 +1,13 @@
 import { Button } from "./ui/button"
-import { Brain, Sparkles } from "lucide-react"
+import { Brain, Mail } from "lucide-react"
 
 export function Hero() {
+  const handleJoinWaitlist = () => {
+    window.location.href = "mailto:contact@shlomiai.com?subject=Join Shlomi AI Waitlist&body=Hi, I'm interested in joining the Shlomi AI waitlist. Please send me access when available.%0D%0A%0D%0AName:%0D%0ARole:%0D%0AInstitution:"
+  }
+
   return (
-    <section className="relative bg-gradient-to-br from-primary-600 via-primary-700 to-accent-600 text-white py-20 px-4 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white py-20 px-4 overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-20"></div>
 
@@ -20,7 +24,7 @@ export function Hero() {
           {/* Main Headline */}
           <h2 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
             Empowering Young Psychologists
-            <span className="block mt-2 bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent">
+            <span className="block mt-2">
               with AI-Powered Training
             </span>
           </h2>
@@ -35,23 +39,25 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
               size="lg"
+              onClick={handleJoinWaitlist}
               className="bg-white text-primary-600 hover:bg-gray-100 shadow-xl text-lg px-8 py-6 h-auto"
             >
-              <Sparkles className="mr-2 h-5 w-5" />
-              Start Free Trial
+              <Mail className="mr-2 h-5 w-5" />
+              Join Waitlist
             </Button>
             <Button
               size="lg"
               variant="outline"
+              onClick={handleJoinWaitlist}
               className="border-white text-white hover:bg-white/10 text-lg px-8 py-6 h-auto"
             >
-              Watch Demo
+              Request Access
             </Button>
           </div>
 
           {/* Trust Badge */}
           <p className="mt-8 text-blue-200 text-sm">
-            Trusted by 500+ psychology students and early-career professionals
+            Join 500+ psychology students on the waitlist
           </p>
         </div>
       </div>

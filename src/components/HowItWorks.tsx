@@ -3,23 +3,23 @@ import { CheckCircle2, ArrowRight } from "lucide-react"
 const steps = [
   {
     number: "01",
-    title: "Sign Up & Set Your Profile",
-    description: "Create your account and tell us about your specialization, experience level, and professional goals. Our AI customizes your experience from day one.",
+    title: "Join the Waitlist",
+    description: "Send us an email to join the waitlist. Tell us about your specialization, experience level, and what you're hoping to achieve with AI-powered training.",
   },
   {
     number: "02",
-    title: "Prepare for Sessions",
-    description: "Before each client meeting, input basic session details. Shlomi AI provides personalized preparation materials, suggested approaches, and relevant research.",
+    title: "Get Early Access",
+    description: "We'll review your application and send you an access link to the platform. Early members will help shape the future of Shlomi AI.",
   },
   {
     number: "03",
-    title: "Practice & Learn",
-    description: "Use our AI-simulated scenarios to practice difficult conversations, test interventions, and build your therapeutic skills in a safe environment.",
+    title: "Set Up Your Profile",
+    description: "Once you have access, create your profile and tell us about your professional goals. Our AI will customize your training experience from day one.",
   },
   {
     number: "04",
-    title: "Track Your Growth",
-    description: "Review your progress dashboard to see skill improvements, completed training modules, and personalized recommendations for continued development.",
+    title: "Start Training",
+    description: "Begin preparing for sessions with AI-powered insights, practice with simulated scenarios, and track your professional growth over time.",
   },
 ]
 
@@ -76,10 +76,10 @@ export function HowItWorks() {
 
         {/* Bottom CTA */}
         <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-green-50 rounded-full">
-            <CheckCircle2 className="h-5 w-5 text-green-600" />
-            <span className="text-green-700 font-medium">
-              No credit card required • 14-day free trial • Cancel anytime
+          <div className="inline-flex items-center gap-2 px-6 py-3 bg-blue-50 rounded-full">
+            <CheckCircle2 className="h-5 w-5 text-primary-600" />
+            <span className="text-primary-700 font-medium">
+              Limited spots available • Early access benefits • Join today
             </span>
           </div>
         </div>

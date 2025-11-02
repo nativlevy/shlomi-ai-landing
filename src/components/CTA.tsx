@@ -1,16 +1,20 @@
 import { Button } from "./ui/button"
-import { Sparkles, ArrowRight } from "lucide-react"
+import { Mail, ArrowRight } from "lucide-react"
 
 export function CTA() {
+  const handleJoinWaitlist = () => {
+    window.location.href = "mailto:contact@shlomiai.com?subject=Join Shlomi AI Waitlist&body=Hi, I'm interested in joining the Shlomi AI waitlist. Please send me access when available.%0D%0A%0D%0AName:%0D%0ARole:%0D%0AInstitution:"
+  }
+
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-primary-600 via-primary-700 to-purple-700 text-white relative overflow-hidden">
+    <section className="py-20 px-4 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-20"></div>
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
         {/* Icon */}
         <div className="inline-flex p-4 bg-white/10 backdrop-blur-sm rounded-2xl mb-6">
-          <Sparkles className="h-12 w-12" />
+          <Mail className="h-12 w-12" />
         </div>
 
         {/* Heading */}
@@ -20,25 +24,26 @@ export function CTA() {
 
         {/* Subheading */}
         <p className="text-xl md:text-2xl mb-10 text-blue-100 max-w-2xl mx-auto">
-          Join hundreds of young psychologists who are building confidence
-          and competence with Shlomi AI.
+          Join the waitlist and be among the first to access Shlomi AI when we launch.
         </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
           <Button
             size="lg"
+            onClick={handleJoinWaitlist}
             className="bg-white text-primary-600 hover:bg-gray-100 shadow-xl text-lg px-10 py-7 h-auto"
           >
-            Start Your Free Trial
+            Join Waitlist
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
           <Button
             size="lg"
             variant="outline"
+            onClick={handleJoinWaitlist}
             className="border-2 border-white text-white hover:bg-white/10 text-lg px-10 py-7 h-auto"
           >
-            Schedule a Demo
+            Contact Us
           </Button>
         </div>
 
@@ -56,7 +61,7 @@ export function CTA() {
                 clipRule="evenodd"
               />
             </svg>
-            <span>14-day free trial</span>
+            <span>Early access</span>
           </div>
           <div className="flex items-center gap-2">
             <svg
@@ -70,7 +75,7 @@ export function CTA() {
                 clipRule="evenodd"
               />
             </svg>
-            <span>No credit card required</span>
+            <span>Priority support</span>
           </div>
           <div className="flex items-center gap-2">
             <svg
@@ -84,7 +89,7 @@ export function CTA() {
                 clipRule="evenodd"
               />
             </svg>
-            <span>Cancel anytime</span>
+            <span>Exclusive benefits</span>
           </div>
         </div>
       </div>
