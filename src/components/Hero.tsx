@@ -3,7 +3,7 @@ import { Brain, Mail } from "lucide-react"
 
 export function Hero() {
   const handleJoinWaitlist = () => {
-    window.location.href = "mailto:contact@shlomiai.com?subject=Join Shlomi AI Waitlist&body=Hi, I'm interested in joining the Shlomi AI waitlist. Please send me access when available.%0D%0A%0D%0AName:%0D%0ARole:%0D%0AInstitution:"
+    window.location.href = "mailto:hello@shlomiai.com?subject=I am interested in Shlomi AI&body=Hi,%0D%0A%0D%0AI am interested in joining Shlomi AI.%0D%0A%0D%0AName:%0D%0ARole:%0D%0AInstitution:%0D%0A%0D%0AThank you!"
   }
 
   return (
@@ -39,23 +39,15 @@ export function Hero() {
             real-time insights, and personalized training scenarios powered by advanced AI.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-5 justify-center items-center animate-scale-in" style={{animationDelay: '0.2s'}}>
+          {/* CTA Button */}
+          <div className="flex justify-center items-center animate-scale-in" style={{animationDelay: '0.2s'}}>
             <Button
               size="lg"
               onClick={handleJoinWaitlist}
-              className="bg-white text-primary-700 hover:bg-primary-50 hover:scale-105 transition-all duration-300 shadow-soft-xl hover:shadow-soft-xl text-base font-semibold px-10 py-7 h-auto rounded-xl"
+              className="bg-white text-primary-700 hover:bg-primary-50 hover:scale-105 transition-all duration-300 shadow-soft-xl hover:shadow-soft-xl text-base font-semibold px-12 py-7 h-auto rounded-xl"
             >
               <Mail className="mr-2 h-5 w-5" />
               Join Waitlist
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              onClick={handleJoinWaitlist}
-              className="border-2 border-white/30 backdrop-blur-sm text-white hover:bg-white/10 hover:border-white/50 hover:scale-105 transition-all duration-300 text-base font-semibold px-10 py-7 h-auto rounded-xl"
-            >
-              Request Access
             </Button>
           </div>
 

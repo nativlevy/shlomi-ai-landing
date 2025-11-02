@@ -3,7 +3,7 @@ import { Mail, ArrowRight } from "lucide-react"
 
 export function CTA() {
   const handleJoinWaitlist = () => {
-    window.location.href = "mailto:contact@shlomiai.com?subject=Join Shlomi AI Waitlist&body=Hi, I'm interested in joining the Shlomi AI waitlist. Please send me access when available.%0D%0A%0D%0AName:%0D%0ARole:%0D%0AInstitution:"
+    window.location.href = "mailto:hello@shlomiai.com?subject=I am interested in Shlomi AI&body=Hi,%0D%0A%0D%0AI am interested in joining Shlomi AI.%0D%0A%0D%0AName:%0D%0ARole:%0D%0AInstitution:%0D%0A%0D%0AThank you!"
   }
 
   return (
@@ -31,23 +31,15 @@ export function CTA() {
           Join the waitlist and be among the first to access Shlomi AI when we launch.
         </p>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-10">
+        {/* CTA Button */}
+        <div className="flex justify-center items-center mb-10">
           <Button
             size="lg"
             onClick={handleJoinWaitlist}
-            className="bg-white text-primary-700 hover:bg-primary-50 hover:scale-105 transition-all duration-300 shadow-soft-xl text-base font-semibold px-10 py-7 h-auto rounded-xl"
+            className="bg-white text-primary-700 hover:bg-primary-50 hover:scale-105 transition-all duration-300 shadow-soft-xl text-base font-semibold px-12 py-7 h-auto rounded-xl"
           >
             Join Waitlist
             <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            onClick={handleJoinWaitlist}
-            className="border-2 border-white/30 backdrop-blur-sm text-white hover:bg-white/10 hover:border-white/50 hover:scale-105 transition-all duration-300 text-base font-semibold px-10 py-7 h-auto rounded-xl"
-          >
-            Contact Us
           </Button>
         </div>
 
