@@ -1,10 +1,7 @@
-import { Button } from "./ui/button"
 import { Mail, ArrowRight } from "lucide-react"
 
 export function CTA() {
-  const handleJoinWaitlist = () => {
-    window.location.href = "mailto:hello@shlomiai.com?subject=I am interested in Shlomi AI&body=Hi,%0D%0A%0D%0AI am interested in joining Shlomi AI.%0D%0A%0D%0AName:%0D%0ARole:%0D%0AInstitution:%0D%0A%0D%0AThank you!"
-  }
+  const mailtoLink = "mailto:hello@shlomiai.com?subject=I am interested in Shlomi AI&body=Hi,%0D%0A%0D%0AI am interested in joining Shlomi AI.%0D%0A%0D%0AName:%0D%0ARole:%0D%0AInstitution:%0D%0A%0D%0AThank you!"
 
   return (
     <section className="py-24 md:py-32 px-4 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white relative overflow-hidden">
@@ -33,14 +30,13 @@ export function CTA() {
 
         {/* CTA Button */}
         <div className="flex justify-center items-center mb-10">
-          <Button
-            size="lg"
-            onClick={handleJoinWaitlist}
-            className="bg-white text-primary-700 hover:bg-primary-50 hover:scale-105 transition-all duration-300 shadow-soft-xl text-base font-semibold px-12 py-7 h-auto rounded-xl"
+          <a
+            href={mailtoLink}
+            className="inline-flex items-center justify-center bg-white text-primary-700 hover:bg-primary-50 hover:scale-105 transition-all duration-300 shadow-soft-xl text-base font-semibold px-12 py-7 rounded-xl no-underline"
           >
             Join Waitlist
             <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          </a>
         </div>
 
         {/* Trust elements */}
