@@ -1,4 +1,3 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card"
 import { BrainCircuit, MessageSquare, Target, TrendingUp, Shield, Zap } from "lucide-react"
 
 const features = [
@@ -36,42 +35,39 @@ const features = [
 
 export function Features() {
   return (
-    <section className="py-24 md:py-32 px-4 bg-gradient-to-b from-white via-gray-50/50 to-white">
-      <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
+    <section id="features" className="py-24 px-4 relative overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute top-1/2 left-0 w-full h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none -translate-y-1/2" />
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight font-display">
-            Everything You Need to Excel
+          <h2 className="text-3xl md:text-5xl font-bold text-text-main mb-6 tracking-tight">
+            Everything You Need <span className="text-text-muted">to Excel</span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-body">
+          <p className="text-xl text-text-muted max-w-2xl mx-auto">
             Comprehensive tools designed specifically for early-career psychologists
             to build confidence and competence.
           </p>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => {
             const Icon = feature.icon
             return (
-              <Card
+              <div
                 key={index}
-                className="group border border-gray-100 bg-white hover:border-primary-200 shadow-soft hover:shadow-soft-lg transition-all duration-500 hover:-translate-y-1 rounded-2xl overflow-hidden"
+                className="group p-8 rounded-2xl bg-surface border border-border hover:border-border/80 transition-all duration-300 hover:bg-surface-hover hover:shadow-lg"
               >
-                <CardHeader className="pb-4">
-                  <div className="mb-5 inline-flex p-4 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl shadow-soft group-hover:scale-110 transition-transform duration-300">
-                    <Icon className="h-7 w-7 text-white" />
-                  </div>
-                  <CardTitle className="text-2xl font-display font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
-                    {feature.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base text-gray-600 leading-relaxed font-body">
-                    {feature.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
+                <div className="mb-6 inline-flex p-3 rounded-lg bg-primary/10 text-primary group-hover:text-white group-hover:bg-primary transition-colors">
+                  <Icon className="h-6 w-6" />
+                </div>
+                <h3 className="text-xl font-semibold text-text-main mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-text-muted leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
             )
           })}
         </div>
@@ -79,3 +75,4 @@ export function Features() {
     </section>
   )
 }
+

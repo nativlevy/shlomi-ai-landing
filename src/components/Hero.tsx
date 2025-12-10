@@ -1,58 +1,91 @@
-import { Brain, Mail } from "lucide-react"
+import { Link } from 'react-router-dom';
+import { ChevronRight, Play } from 'lucide-react';
 
 export function Hero() {
-  const mailtoLink = "mailto:hello@shlomiai.com?subject=I am interested in Shlomi AI&body=Hi,%0D%0A%0D%0AI am interested in joining Shlomi AI.%0D%0A%0D%0AName:%0D%0ARole:%0D%0AInstitution:%0D%0A%0D%0AThank you!"
-
   return (
-    <section className="relative bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white py-24 md:py-32 px-4 overflow-hidden">
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-20"></div>
+    <section className="relative pt-32 pb-20 overflow-hidden">
+      {/* Background glow effects */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] bg-primary/20 blur-[100px] rounded-full pointer-events-none opacity-50" />
 
-      {/* Gradient orbs */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-primary-400 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse" style={{animationDelay: '1s'}}></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div className="inline-flex items-center space-x-2 bg-surface border border-border rounded-full px-3 py-1 mb-8 backdrop-blur-sm animate-fade-in hover:bg-surface-hover transition-colors cursor-default shadow-sm">
+          <span className="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+          <span className="text-sm text-text-main font-medium">Now accepting early access</span>
+          <ChevronRight className="w-4 h-4 text-text-muted" />
+        </div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center max-w-5xl mx-auto">
-          {/* Logo/Brand */}
-          <div className="flex items-center justify-center gap-3 mb-8 animate-fade-in">
-            <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl shadow-soft-lg border border-white/10">
-              <Brain className="h-12 w-12" />
+        <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-text-main mb-8 animate-slide-up leading-tight">
+          Master clinical psychology <br />
+          <span className="bg-gradient-to-r from-primary via-purple-500 to-pink-500 bg-clip-text text-transparent">with AI simulations</span>
+        </h1>
+
+        <p className="text-xl text-text-muted max-w-2xl mx-auto mb-10 animate-slide-up" style={{ animationDelay: '0.1s' }}>
+          Experience realistic patient scenarios, receive real-time supervision feedback, and build your confidence before seeing real patients.
+        </p>
+
+        <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 animate-slide-up" style={{ animationDelay: '0.2s' }}>
+          <Link to="/signup" className="group w-full sm:w-auto px-8 py-3.5 bg-primary hover:bg-primary-hover text-white rounded-full font-medium transition-all shadow-lg shadow-primary/25 flex items-center justify-center">
+            Start Training Now
+            <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-0.5 transition-transform" />
+          </Link>
+          <button className="w-full sm:w-auto px-8 py-3.5 bg-background hover:bg-surface-hover border border-border text-text-main rounded-full font-medium transition-all flex items-center justify-center shadow-sm">
+            <Play className="w-4 h-4 mr-2 text-text-muted" />
+            Watch Demo
+          </button>
+        </div>
+      </div>
+
+      {/* Hero Image / Mock Interface */}
+      <div className="mt-24 max-w-5xl mx-auto px-4 relative z-10 animate-slide-up" style={{ animationDelay: '0.4s' }}>
+        <div className="rounded-xl bg-surface border border-border p-2 shadow-2xl shadow-primary/5 backdrop-blur-xl">
+          <div className="rounded-lg bg-background border border-border overflow-hidden aspect-[16/9] relative shadow-inner">
+            {/* Mock Chat Interface */}
+            <div className="absolute inset-0 flex flex-col">
+              {/* Header */}
+              <div className="h-12 border-b border-border flex items-center px-4 justify-between bg-surface/50">
+                <div className="flex space-x-2">
+                  <div className="w-3 h-3 rounded-full bg-red-500/20 text-red-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-yellow-500/20 text-yellow-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-green-500/20 text-green-500"></div>
+                </div>
+                <div className="text-xs text-text-muted">Simulate: Anxiety Disorder Case #42</div>
+              </div>
+              {/* Chat Area */}
+              <div className="flex-1 p-6 space-y-6 overflow-hidden">
+                {/* Bot Message */}
+                <div className="flex space-x-4 max-w-2xl">
+                  <div className="w-8 h-8 rounded-full bg-purple-500/20 flex items-center justify-center text-xs text-purple-400">AI</div>
+                  <div className="flex-1 space-y-2">
+                    <div className="bg-surface rounded-2xl rounded-tl-none p-4 text-sm text-text-main">
+                      I've been feeling really overwhelmed lately. Even small tasks feel impossible, and I just freeze up. I don't know why this is happening to me.
+                    </div>
+                  </div>
+                </div>
+                {/* User Message */}
+                <div className="flex space-x-4 max-w-2xl ml-auto flex-row-reverse space-x-reverse">
+                  <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-xs text-primary">You</div>
+                  <div className="flex-1 space-y-2">
+                    <div className="bg-primary/10 border border-primary/20 rounded-2xl rounded-tr-none p-4 text-sm text-text-main">
+                      It sounds like you're carrying a heavy burden right now. When you say you "freeze up," can you tell me more about what that feels like in your body?
+                    </div>
+                  </div>
+                </div>
+                {/* Feedback Toast */}
+                <div className="absolute bottom-8 right-8 max-w-xs p-4 bg-surface/90 backdrop-blur border border-green-500/20 rounded-lg shadow-xl translate-y-0 opacity-100 transition-all">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 mt-1.5 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.5)]"></div>
+                    <div>
+                      <p className="text-xs font-bold text-text-main mb-1">Excellent Intervention</p>
+                      <p className="text-xs text-text-muted">Good use of somatic inquiry to ground the patient's experience. This helps deepen emotional awareness.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold tracking-tight font-display">Shlomi AI</h1>
           </div>
-
-          {/* Main Headline */}
-          <h2 className="text-5xl md:text-7xl font-bold mb-8 leading-tight tracking-tight font-display animate-slide-up">
-            Empowering Young Psychologists
-            <span className="block mt-3 text-primary-100">
-              with AI-Powered Training
-            </span>
-          </h2>
-
-          {/* Subheadline */}
-          <p className="text-lg md:text-xl mb-12 text-primary-50/90 max-w-3xl mx-auto leading-relaxed font-body animate-slide-up" style={{animationDelay: '0.1s'}}>
-            Transform your clinical practice with intelligent session preparation,
-            real-time insights, and personalized training scenarios powered by advanced AI.
-          </p>
-
-          {/* CTA Button */}
-          <div className="flex justify-center items-center animate-scale-in" style={{animationDelay: '0.2s'}}>
-            <a
-              href={mailtoLink}
-              className="inline-flex items-center justify-center bg-white text-primary-700 hover:bg-primary-50 hover:scale-105 transition-all duration-300 shadow-soft-xl hover:shadow-soft-xl text-base font-semibold px-12 py-7 rounded-xl no-underline"
-            >
-              <Mail className="mr-2 h-5 w-5" />
-              Join Waitlist
-            </a>
-          </div>
-
-          {/* Trust Badge */}
-          <p className="mt-10 text-primary-100/80 text-sm font-medium tracking-wide animate-fade-in" style={{animationDelay: '0.3s'}}>
-            Join 500+ psychology students on the waitlist
-          </p>
         </div>
       </div>
     </section>
   )
 }
+
